@@ -2,7 +2,7 @@
 %
 %=====================================================
 
-function [IMSCL,err] = ImageContrastValMag_v1c_Func(IMSCL,INPUT)
+function [IMSCL,err] = ImageContrastValSelect_v1d_Func(IMSCL,INPUT)
 
 Status2('busy','Image Scale',3);
 
@@ -20,8 +20,9 @@ clear INPUT;
 % MSTRCT
 %---------------------------------------------
 MSTRCT.dispwid = [IMSCL.minval IMSCL.maxval];
-MSTRCT.type = 'abs';
+MSTRCT.type = IMSCL.type;
 MSTRCT.colour = IMSCL.colour;
+MSTRCT.colourmap = IMSCL.colourmap;
 MSTRCT.zero = 'black';
 
 %---------------------------------------------

@@ -12,7 +12,7 @@ elseif strcmp(filesep,'/')
 end
 loadfunc = 'Im1LoadGeneric_v1c';
 montcharsfunc = 'MontageCharsStandard_v1b';
-createfunc = 'MontageFigure_v1b';
+createfunc = 'MontageFigure_v1d';
 
 m = 1;
 default{m,1}.entrytype = 'OutputName';
