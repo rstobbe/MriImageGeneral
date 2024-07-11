@@ -70,6 +70,12 @@ if strcmp(EXPORT.datatype,'single')
 end
 description = [];
 
+%---------
+Im = Im - 0.025;
+Im = abs(Im);
+%---------
+
+
 sz = size(Im);
 if length(sz) == 3
     nii = MakeNiftiHeaderYB_v1a(Im,voxeldims,origin,datatype,description); 

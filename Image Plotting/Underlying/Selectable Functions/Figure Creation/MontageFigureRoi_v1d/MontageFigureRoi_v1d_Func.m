@@ -24,10 +24,10 @@ clear INPUT
 %----------------------------------------------
 % Test (use 1nd image if from array)
 %----------------------------------------------
-sz = size(Image);
-if length(sz) > 3
-    Image = Image(:,:,:,1,1,1,1);
-end
+% sz = size(Image);
+% if length(sz) > 3
+%     Image = Image(:,:,:,1,1,1,1);
+% end
 
 %----------------------------------------------
 % Scale

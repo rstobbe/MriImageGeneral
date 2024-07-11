@@ -98,6 +98,7 @@ INPUT.numberslices = [];
 INPUT.Image = Image;
 INPUT.usencolumns = MCHRS.ncolumns;
 INPUT.MSTRCT = MSTRCT;
-[MCHRS,err] = DefaultMontageChars_v1a(INPUT);
+%[MCHRS,err] = DefaultMontageChars_v1a(INPUT);
+[MCHRS,err] = DefaultMontageChars_v1b(INPUT);               % not changes just additions
 
 Status2('done','',3);

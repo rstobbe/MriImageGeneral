@@ -17,6 +17,12 @@ IMG = INPUT.IMG;
 clear INPUT
 
 %---------------------------------------------
+% Array Handle
+%---------------------------------------------
+IMG.Im = squeeze(IMG.Im);
+sz = size(IMG.Im);
+
+%---------------------------------------------
 % Permute
 %---------------------------------------------
 ind = strfind(MANIP.permute,',');
@@ -24,7 +30,11 @@ pmt(1) = str2double(MANIP.permute(2));
 for n = 1:length(ind)
     pmt(n+1) = str2double(MANIP.permute(ind(n)+1));
 end
-IMG.Im = permute(IMG.Im,pmt);       
+if length(sz) > 3
+    IMG.Im = permute(IMG.Im,[pmt 4]);
+else
+    IMG.Im = permute(IMG.Im,pmt);
+end
 IMG.IMDISP.ImInfo.pixdim = IMG.IMDISP.ImInfo.pixdim(pmt);
 
 %---------------------------------------------

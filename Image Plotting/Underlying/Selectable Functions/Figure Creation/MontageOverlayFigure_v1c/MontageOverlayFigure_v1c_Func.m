@@ -73,6 +73,7 @@ else
 end
 if isfield(MSTRCT0,'colour')
     MSTRCT.colour2 = MSTRCT0.colour;
+    MSTRCT.ColorMap = MSTRCT0.colourmap;
 else
     MSTRCT.colour2 = 'No';
 end
