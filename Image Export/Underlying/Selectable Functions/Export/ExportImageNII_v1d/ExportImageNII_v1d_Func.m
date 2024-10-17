@@ -19,6 +19,7 @@ Im = abs(IMG.Im);
 Im = permute(Im,[2 1 3 4]);
 Im = flip(Im,2);                               
 %Im = flip(Im,1);                                % think this is right - make correction somewhere else
+Im = gather(Im);
 folder = INPUT.folder;
 filename = IMG.name;
 clear INPUT
